@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+/* animals recued today text: 1 */
+#animalsRescuedText {
+  margin-top: 30px; /* Adjust the margin as needed */
+}
+
+.active {
+  background-color: #717171;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Adjust the z-index based on your layout */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffcc00;
+  opacity: 0; /* Initially set to transparent */
+  animation: fadeIn 2.5s ease-out forwards; /* Animation duration and easing */
+
+  /* Additional styles for animation */
+  transform: translateY(-10px); /* Optional: Move logo slightly upwards */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Optional: Start position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Optional: End position */
+  }
+}
+
+nav {
+  margin-left: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  padding-left: 20px;
+  align-items: center;
+  margin-left: 40px;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease, opacity 0.5s ease; /* Added opacity transition */
+  font-size: 18px;
+  margin-right: 20px;
+  animation: fadeInNav 2.5s ease-out forwards;
+}
+
+nav ul li a:hover {
+  color: #ffcc00; /* Change to your desired hover color */
+  opacity: 0.7;
+}
+
+/* weimeraner picutre here */
+.main-picture {
+  width: 100%;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  right: 0; /* Adjust the right property to move it to the right */
+  bottom: 0;
+  left: 0; /* Set left to 0 to cover the whole page */
+  transform: translateX(0);
+  z-index: -1;
+}
+
+/*main h1 text here */
+.main-text {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  font-size: 4vw;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px; /* Add padding to the text */
+  border-radius: 10px; /* Add rounded corners to the border */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+  opacity: 0; /* Initially set to transparent */
+  animation: fadeIn 6s forwards, glistening 8s infinite alternate; /* Multiple animations */
+
+  /* Additional styles for animation */
+  transform: translateY(-10px); /* Optional: Move text slightly upwards */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Optional: Start position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Optional: End position */
+  }
+}
+
+@keyframes glistening {
+  to {
+    background-size: 200% 100%;
+    background-position: right center;
+  }
+}
+
+/* "Saving animals" only here ...*/
+/* Add this style to your existing .highlight-text class */
+.highlight-text {
+  background: linear-gradient(45deg, #ffcc00, #faf7f8);
+  -webkit-background-clip: text;
+  color: transparent;
+  color: #ffcc00;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* Animation for the underline */
+@keyframes underlineAnimation {
+  0% {
+    transform: scaleX(0); /* Initially no width */
+    transform-origin: 0% 50%;
+  }
+  100% {
+    transform: scaleX(1); /* Full width */
+    transform-origin: 0% 50%;
+  }
+}
+
+.highlight-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(45deg, #ffcc00, #faf7f8);
+  animation: underlineAnimation 7s ease forwards; /* Apply the animation */
+}
+
+/* No hover effect needed */
+
+section {
+  text-align: right;
+  margin-top: 25%; /* newly edited here it was previously 500px */
+  margin-right: 180px;
+  padding: auto;
+}
+
+.hands {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 100px; /* Adjust this value based on your preference */
+  text-align: right;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.participate {
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  margin-left: 65%;
+  margin-bottom: 25px;
+  margin-top: -65px;
+  animation: fadeIn 10s forwards, glistening 12s infinite alternate;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  line-height: 0.1;
+}
+
+.footer i {
+  font-size: 50px;
+}
+
+/* back to top arrow */
+
+/* Add this to your existing styles */
+.back-to-top {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: 40px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 5;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #ffcc00;
+  opacity: 0.8;
+  padding: 6px;
+}
+
+/* ticker styling here */
+
+.ticker-container {
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: -30px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ticker-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffcc00;
+  margin-right: 10px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.ticker-container .ticker-text {
+  font-size: 18px;
+  color: #ffcc00;
+  margin-bottom: -200px;
+  margin-top: 40px;
+}
+
+.ticker {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff; /* Your highlight color */
+  background-color: #333; /* Your background color */
+  padding: 1px 5px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+  margin-bottom: 1px;
+}
